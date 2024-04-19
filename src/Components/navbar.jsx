@@ -15,7 +15,7 @@ const Navbar = () => {
 		<header>
 			<h3>Ardika</h3>
 			<nav ref={navRef}>
-			<a className="OptionBtn" href="/home">Home</a>
+			<a className="OptionBtn" href="/">Home</a>
 			<a className="OptionBtn" href="/Portofolio">Portofolio</a>
 				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
 					<FaTimes />
