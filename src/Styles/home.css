@@ -8,13 +8,13 @@
     opacity: 90%;
 }
 .fancy-box img{
-    rotate: 15deg;
-    width: 120%;
+    transform: rotate(15deg) translate(0px, 0px);
+    width: 150%;
     /* object-fit: cover; */
     position: absolute;
     z-index: 1;
-    padding: 100px 0;
-    margin: 0 -200px;
+    /* padding: 20% 0; */
+    margin: 0 -20%;
 }
 
 .greet-container{
@@ -63,7 +63,10 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+    .fancy-box img{
+     padding: 15% 0;   
+    }
     .greet{
         flex-direction: column-reverse;
         height: 100%;
