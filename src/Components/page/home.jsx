@@ -7,9 +7,9 @@ const Home = () => {
 
     return (
         <div className="greet-container">
-            <div className="fancy-box">
+            {/* <div className="fancy-box">
                 <img src={under} alt="" />
-            </div>
+            </div> */}
             <div className="greet">
                 <div className="greet-text">
                     <h1>Hi, I'm Alif Ardika</h1>
