@@ -6,6 +6,7 @@ import Portofolio from './Components/page/portofolio';
 import Form from './Components/page/form';
 import Adduser from './Components/page/addUser';
 import Edituser from './Components/page/editUser';
+import Cek from './Components/page/cek';
 import './Styles/App.css';
 
 function App() {
@@ -14,10 +15,12 @@ function App() {
       <Navbar/>
           <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='/home' element={<Home/>} />
           <Route path='/portofolio' element={<Portofolio/>} />
           <Route path='/form' element={<Form/>} />
           <Route path='/addUser' element={<Adduser/>} />
           <Route path='/editUser/:id' element={<Edituser/>} />
+          <Route path='/cek' element={<Cek/>} />
       </Routes>
     </BrowserRouter>
   );

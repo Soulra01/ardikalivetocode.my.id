@@ -13,17 +13,17 @@ const Navbar = () => {
 
 	return (
 		<header>
-			<h3>Ardika</h3>
 			<nav ref={navRef}>
-			<a className="OptionBtn" href="/home">Home</a>
-			<a className="OptionBtn" href="/Portofolio">Portofolio</a>
+				<a className="Title" href="/home">Ardika</a>
+				<div className="nav-options">
+					<a className="OptionBtn" href="/home">Home</a>
+					<a className="OptionBtn" href="/cek">Portofolio</a>
+				</div>
 				<button className="nav-btn nav-close-btn" onClick={showNavbar}>
 					<FaTimes />
 				</button>
 			</nav>
-			<button
-				className="nav-btn"
-				onClick={showNavbar}>
+			<button className="nav-btn" onClick={showNavbar}>
 				<FaBars />
 			</button>
 		</header>
