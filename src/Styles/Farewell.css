@@ -1,0 +1,53 @@
+.Background-img {
+    background-image: url('../Components/page/images/Farewell.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Lebar penuh */
+    min-height: 100vh; /* Tinggi minimum adalah 100% viewport */
+    display: flex; /* Jika ada konten, tambahkan fleksibilitas */
+    align-items: center; /* Konten vertikal berada di tengah */
+    justify-content: center; /* Konten horizontal berada di tengah */
+}
+
+.date-input-container {
+    width: 55%;
+    height: 100px;
+    text-align: center;
+    margin: 20px auto; /* Untuk memusatkan secara horizontal */
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+
+    display: flex; /* Aktifkan flexbox */
+    flex-direction: row; 
+    justify-content: center; /* Pusatkan secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+label {
+    margin-left: 15px; /* Memberikan jarak antara label dan input */
+    color: black;
+}
+
+input::placeholder {
+    color: black; /* Ganti dengan warna yang diinginkan */
+    font-style: italic; /* Opsional: untuk menambah gaya */
+}
+
+#date-input {
+    background-color: rgb(255,255,255,0.7);
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    color: black;
+    background-color: rgb(255,255,255,0.7);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
