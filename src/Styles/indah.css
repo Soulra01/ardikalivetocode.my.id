@@ -1,0 +1,11 @@
+.Background-img {
+    background-image: url('../Components/page/images/Farewell.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Lebar penuh */
+    min-height: 100vh; /* Tinggi minimum adalah 100% viewport */
+    display: flex; /* Jika ada konten, tambahkan fleksibilitas */
+    align-items: center; /* Konten vertikal berada di tengah */
+    justify-content: center; /* Konten horizontal berada di tengah */
+}
