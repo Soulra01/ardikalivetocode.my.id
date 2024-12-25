@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    font-family: 'Poppins';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .Background-img {
     background-image: url('../Components/page/images/Farewell.png');
     background-size: cover;
@@ -34,6 +40,7 @@ label {
 input::placeholder {
     color: black; /* Ganti dengan warna yang diinginkan */
     font-style: italic; /* Opsional: untuk menambah gaya */
+    font-family: 'Poppins';
 }
 
 #date-input {
@@ -50,4 +57,5 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    font-family: 'Poppins';
 }

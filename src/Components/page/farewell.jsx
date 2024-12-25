@@ -15,7 +15,7 @@ const Farewell = () => {
     return (
         <div className="Background-img">
             <div className="date-input-container">
-                <label htmlFor="date-input">Masukkan Tanggal:</label>
+                <label htmlFor="date-input">Tanggal Farewell-mu:    </label>
                 <input
                     id="date-input"
                     type="text"
