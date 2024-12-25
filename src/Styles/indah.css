@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'Chalkduster';
+    src: url('../Components/font/Chalkduster.ttf') format('truetype'); /* Ganti dengan path ke file font */
+    font-weight: normal;
+    font-style: normal;
+}
+/* Terapkan font Chalkduster hanya pada halaman tertentu */
+.page-chalkduster {
+    font-family: 'Chalkduster', sans-serif !important;
+}
+
 .Background-img {
-    background-image: url('../Components/page/images/Farewell.png');
+    /* background-image: url('../Components/page/images/Farewell.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,4 +19,64 @@
     display: flex; /* Jika ada konten, tambahkan fleksibilitas */
     align-items: center; /* Konten vertikal berada di tengah */
     justify-content: center; /* Konten horizontal berada di tengah */
+}
+.modal {
+    width: 100px;
+    position: fixed; /* Membuat modal selalu ada di posisi yang sama saat scroll */
+    top: 50%; /* Letakkan di tengah secara vertikal */
+    left: 50%; /* Letakkan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Koreksi untuk memusatkan elemen */
+    display: flex; /* Aktifkan flexbox */
+    flex-direction: column; /* Tampilkan elemen secara vertikal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    align-items: center; /* Pusatkan secara horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    background-color: rgba(255, 255, 255, 0.9); /* Tambahkan warna latar belakang */
+    padding: 20px; /* Ruang di dalam modal */
+    border-radius: 10px; /* Opsional: membuat sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk tampilan lebih baik */
+    z-index: 1000; /* Pastikan modal di atas elemen lain */
+}
+.modal button {
+    background-color: #ffffff; /* Warna latar belakang default tombol */
+    color: black; /* Warna teks tombol */
+    /* border: none; Menghilangkan border default */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Menambahkan transisi halus untuk hover */
+}
+
+.modal button:hover {
+    background-color: #aaaaaa86; /* Warna latar belakang saat hover */
+    color: black; /* Warna teks saat hover */
+}
+.cek {
+    color: white;
+    opacity: 0;
+    width: 90%;
+    /* height: 100%; */
+    height: 90vh;
+    background-color: rgba(141, 141, 141, 0.96); /* Warna putih transparan */
+    border-start-start-radius: 4rem;
+    border-start-end-radius: 1rem;
+    border-end-end-radius: 3rem;
+    border-end-start-radius: 2rem;
+    transform: translateY(20px); /* Elemen mulai dengan posisi lebih rendah */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi smooth */
+}
+.pesan{
+    margin: 30px;
+    font-family: poppins;
+    margin: 30px 30px;
+    font-size: 30px;
+    text-align: justify;
+}
+.pesan p{
+    margin: 30px;
+}
+
+.cek.show {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi semula */
 }
