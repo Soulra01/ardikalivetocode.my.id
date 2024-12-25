@@ -4,6 +4,11 @@
     font-weight: normal;
     font-style: normal;
 }
+body{
+    scroll-behavior: smooth; /* Memungkinkan scroll yang halus */
+    overflow-y: auto; /* Memastikan scrollbar vertikal muncul jika konten melampaui tinggi viewport */
+    overflow-x: hidden; /* Menyembunyikan scrollbar horizontal jika tidak diperlukan */
+}
 /* Terapkan font Chalkduster hanya pada halaman tertentu */
 .page-chalkduster {
     font-family: 'Chalkduster', sans-serif !important;
@@ -56,7 +61,13 @@
     opacity: 0;
     width: 90%;
     /* height: 100%; */
-    height: 100vh;
+    min-height: 10vh;
+    padding: 20px;
+    margin: 20px;
+    display: flex; /* Aktifkan Flexbox */
+    flex-direction: column; /* Elemen diatur secara vertikal */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    justify-content: center; /* Pusatkan elemen secara vertikal */
     background-color: rgba(141, 141, 141, 0.96); /* Warna putih transparan */
     border-start-start-radius: 4rem;
     border-start-end-radius: 1rem;
@@ -65,10 +76,23 @@
     transform: translateY(20px); /* Elemen mulai dengan posisi lebih rendah */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi smooth */
 }
+.cek img {
+    max-width: 350px;
+    max-height: 450px;
+    border-start-start-radius: 4rem;
+    border-start-end-radius: 1rem;
+    border-end-end-radius: 3rem;
+    border-end-start-radius: 2rem;
+    object-fit: cover;
+    /* margin-bottom: 10px; */
+    justify-content: center;
+    /* transform: scale(3); Skala gambar */
+
+}
 .pesan{
-    margin: 30px;
+    /* margin: 10px; */
     font-family: poppins;
-    margin: 30px 30px;
+    /* margin: 10px; */
     font-size: 30px;
     text-align: justify;
 }
@@ -81,12 +105,21 @@
     transform: translateY(0); /* Kembali ke posisi semula */
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
+    .cek img {
+        width: 30%;
+        height: 30%;
+        /* border-radius: 50%; */
+        object-fit: cover;
+        /* margin-bottom: 10px; */
+        justify-content: center;
+    
+    }
     .pesan {
-        margin: 30px;
+        margin: 20px;
         font-family: poppins;
         margin: 30px 30px;
-        font-size: 20px;
+        font-size: 25px;
         text-align: justify;
     }
 }
