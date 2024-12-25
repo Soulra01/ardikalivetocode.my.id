@@ -11,7 +11,7 @@ const Indah = () => {
         const audioElement = audioRef.current;
         if (audioElement) {
             audioElement.volume = 0.5;
-            // audioElement.play();
+            audioElement.play();
         }
         setShowModal(false);
         setShowCek(true); // Tampilkan elemen dengan class "cek"
