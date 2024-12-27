@@ -58,6 +58,7 @@ const Indah = () => {
                 </div>
                 
                 <div className="pesan">
+                    <h1>13/12/24</h1>
                     <p>
                         It’s hard to put into words how much your presence has meant to me. You've been a source of light, laughter, and comfort, making even the ordinary moments extraordinary. I don’t know how I feel about you or how to describe it—I mean seriously, I don’t even know what place you hold in my life or what you truly mean to me, but thank you for coming into my life when I needed it most. This year was the saddest for me, and you came out of nowhere and brought joy back into my LIFE.....
                     </p>
