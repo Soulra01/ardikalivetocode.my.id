@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../../Styles/Farewell.css";
 import { handleDateChange } from "./scripts/dateHandler";
 import { processDate } from "./scripts/farewell";
+import video1 from "./images/Farewell2.mp4";
 
 const Farewell = () => {
     const [date, setDate] = useState("");
@@ -23,7 +24,10 @@ const Farewell = () => {
     };
 
     return (
-        <div className="Background-img">
+        <div className="Background">
+            <video autoPlay muted loop id="bg-video">
+                <source src={video1} type="video/mp4"></source>
+            </video>
             <div className="date-input-container">
                 <label htmlFor="date-input">Tanggal Farewell-mu: </label>
                 <input

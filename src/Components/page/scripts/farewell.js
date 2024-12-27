@@ -8,6 +8,6 @@ export const processDate = (date, navigate) => {
     } else if (inputDate.getTime() === new Date(2024, 5, 5).getTime()) {
         navigate("/b");
     } else {
-        alert("Tanggal tidak sesuai dengan rute yang ada.");
+        alert("Yaaa tanggal farewell lu ga bener coba cek lagi dehh.... 😑");
     }
 };
