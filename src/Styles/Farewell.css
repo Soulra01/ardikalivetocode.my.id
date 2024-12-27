@@ -6,6 +6,7 @@ body{
 }
 .Background-img {
     background-image: url('../Components/page/images/Farewell.png');
+    z-index: -4;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +16,13 @@ body{
     align-items: center; /* Konten vertikal berada di tengah */
     justify-content: center; /* Konten horizontal berada di tengah */
 }
-
+.Background{
+    width: 100%; /* Lebar penuh */
+    min-height: 100vh; /* Tinggi minimum adalah 100% viewport */
+    display: flex; /* Jika ada konten, tambahkan fleksibilitas */
+    align-items: center; /* Konten vertikal berada di tengah */
+    justify-content: center; /* Konten horizontal berada di tengah */
+}
 .date-input-container {
     width: 55%;
     height: 100px;
@@ -35,12 +42,14 @@ body{
 label {
     margin-left: 15px; /* Memberikan jarak antara label dan input */
     color: black;
+
 }
 
 input::placeholder {
     color: black; /* Ganti dengan warna yang diinginkan */
     font-style: italic; /* Opsional: untuk menambah gaya */
     font-family: 'Poppins';
+    border: none;
 }
 
 #date-input {
@@ -54,8 +63,22 @@ input::placeholder {
 button {
     color: black;
     background-color: rgb(255,255,255,0.7);
+    border-radius: 50px;
+    border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     font-family: 'Poppins';
+}
+@media screen and (max-width: 1500px) {
+    .date-input-container {
+        width: 90%;
+        height: 200px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    #date-input {
+        margin-right: 0;
+    }
+    
 }

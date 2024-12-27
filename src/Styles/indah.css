@@ -14,8 +14,35 @@ body{
     font-family: 'Chalkduster', sans-serif !important;
 }
 
-.Background-img {
-    /* background-image: url('../Components/page/images/Farewell.png'); */
+.basenya{
+    width: 100%; /* Lebar penuh */
+    min-height: 100vh; /* Tinggi minimum adalah 100% viewport */
+    display: flex; /* Jika ada konten, tambahkan fleksibilitas */
+    align-items: center; /* Konten vertikal berada di tengah */
+    justify-content: center; /* Konten horizontal berada di tengah */
+}
+
+#bg-video {
+    position: fixed; /* Menggunakan fixed agar video tetap di latar belakang meskipun halaman di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    object-fit: cover; /* Memastikan video mengisi seluruh layar */
+    z-index: -1; /* Menempatkan video di belakang konten */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Konten di atas video */
+    color: white; /* Warna teks agar terlihat jelas di atas video */
+    padding: 20px;
+    /* Anda bisa menambahkan padding, margin, atau gaya lainnya untuk konten Anda */
+}
+
+.Background-imgs {
+    background-image: url('../Components/page/images/Farewell.png');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,8 +52,11 @@ body{
     align-items: center; /* Konten vertikal berada di tengah */
     justify-content: center; /* Konten horizontal berada di tengah */
 }
+
 .modal {
-    width: 100px;
+    font-weight: 100;
+    font-size: 20px;
+    width: 500px;
     position: fixed; /* Membuat modal selalu ada di posisi yang sama saat scroll */
     top: 50%; /* Letakkan di tengah secara vertikal */
     left: 50%; /* Letakkan di tengah secara horizontal */
@@ -57,12 +87,13 @@ body{
     color: black; /* Warna teks saat hover */
 }
 .cek {
+    
     color: white;
     opacity: 0;
     width: 90%;
     /* height: 100%; */
     min-height: 10vh;
-    padding: 20px;
+    padding: 40px;
     margin: 20px;
     display: flex; /* Aktifkan Flexbox */
     flex-direction: column; /* Elemen diatur secara vertikal */
@@ -77,8 +108,8 @@ body{
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi smooth */
 }
 .cek img {
-    max-width: 350px;
-    max-height: 450px;
+    width: 350px;
+    height: 450px;
     border-start-start-radius: 4rem;
     border-start-end-radius: 1rem;
     border-end-end-radius: 3rem;
@@ -89,6 +120,9 @@ body{
     /* transform: scale(3); Skala gambar */
 
 }
+.image-continer{
+    margin: 20px
+}
 .pesan{
     /* margin: 10px; */
     font-family: poppins;
@@ -97,7 +131,7 @@ body{
     text-align: justify;
 }
 .pesan p{
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 .cek.show {
@@ -106,20 +140,37 @@ body{
 }
 
 @media screen and (max-width: 1500px) {
+    .Background-imgs{
+        background-image: none;
+    }
+    .bgfoto {
+        display: block;
+    }
+    .pesan p{
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    .cek{
+        padding: 10px;
+    }
     .cek img {
-        width: 30%;
-        height: 30%;
+        /* width: 135px;
+        height: 135px; */
         /* border-radius: 50%; */
         object-fit: cover;
         /* margin-bottom: 10px; */
         justify-content: center;
     
     }
+    .modal{
+        width: 90%;
+        font-size: 17px;
+    }
     .pesan {
         margin: 20px;
         font-family: poppins;
         margin: 30px 30px;
-        font-size: 25px;
+        font-size: 15px;
         text-align: justify;
     }
 }
