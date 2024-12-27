@@ -67,6 +67,9 @@ const Indah = () => {
                     <p>
                     <br></br>I know this might sound like I’m overreacting, but I’m being honest with you. Wherever life takes you, I hope it’s filled with endless joy, success, and love, because you truly deserve nothing less. Though we may be apart, I’ll always hold a special place for you in my heart. Farewell for now, and may our paths cross again someday, if god allow us...☺️
                     </p>
+                    <p>
+                    <br></br>*The content of this could change over time, until I get used to it like usual, but your memory is eternal in here.
+                    </p>
                 </div>
             </div>
         </div>
