@@ -28,8 +28,8 @@ body{
     height: 100px;
     text-align: center;
     margin: 20px auto; /* Untuk memusatkan secara horizontal */
-    color: black;
-    background-color: rgba(255, 255, 255, 0.7);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50px;
 
     display: flex; /* Aktifkan flexbox */
@@ -41,28 +41,28 @@ body{
 
 label {
     margin-left: 15px; /* Memberikan jarak antara label dan input */
-    color: black;
-
+    color: rgb(255, 255, 255);
+    
 }
 
 input::placeholder {
-    color: black; /* Ganti dengan warna yang diinginkan */
+    color: rgb(255, 255, 255); /* Ganti dengan warna yang diinginkan */
     font-style: italic; /* Opsional: untuk menambah gaya */
     font-family: 'Poppins';
     border: none;
 }
 
 #date-input {
-    background-color: rgb(255,255,255,0.7);
-    color: black;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
     padding: 10px;
     font-size: 16px;
     margin-right: 10px;
 }
 
 button {
-    color: black;
-    background-color: rgb(255,255,255,0.7);
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50px;
     border: none;
     padding: 10px 20px;
