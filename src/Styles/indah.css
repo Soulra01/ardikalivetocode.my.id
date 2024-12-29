@@ -41,7 +41,7 @@ body{
 }
 
 .Background-imgs {
-    background-image: url('../Components/page/images/Farewell.png');
+    /* background-image: url('../Components/page/images/Farewell.png'); */
 
     background-size: cover;
     background-position: center;
