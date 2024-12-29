@@ -190,4 +190,10 @@ body{
         font-size: 15px;
         text-align: justify;
     }
+    .diary p{
+        font-family: poppins;
+        font-size: 10px;
+        text-align: center;
+        padding-top: 10px;
+    }
 }
