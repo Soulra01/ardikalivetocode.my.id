@@ -40,6 +40,7 @@ const Farewell = () => {
                 />
                 <button onClick={handleSubmit}>Submit</button>
             </div>
+            
         </div>
     );
 };
