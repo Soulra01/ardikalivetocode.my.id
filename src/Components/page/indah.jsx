@@ -139,7 +139,7 @@ const Indah = () => {
                     <br />
                         <div className="diary">
                             <h2>Diary</h2>
-                            <p>I don’t know what to write, but if I feel like it and suddenly think of you, I’ll just write this.</p>
+                            <p>I don’t know what to write, but if I feel like it and suddenly think or miss of you, I’ll just write this.</p>
                         </div>
                     <br />
                     <p><h6>30/12/24</h6>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
