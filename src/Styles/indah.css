@@ -66,15 +66,16 @@ body{
     justify-content: center; /* Pusatkan secara vertikal */
     align-items: center; /* Pusatkan secara horizontal */
     gap: 20px; /* Jarak antar elemen */
-    background-color: rgba(255, 255, 255, 0.9); /* Tambahkan warna latar belakang */
+    color: white; /* Warna teks */
+    background-color: rgba(0, 0, 0, 0.9); /* Tambahkan warna latar belakang */
     padding: 20px; /* Ruang di dalam modal */
     border-radius: 10px; /* Opsional: membuat sudut melengkung */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk tampilan lebih baik */
     z-index: 1000; /* Pastikan modal di atas elemen lain */
 }
 .modal button {
-    background-color: #ffffff; /* Warna latar belakang default tombol */
-    color: black; /* Warna teks tombol */
+    background-color: #000000; /* Warna latar belakang default tombol */
+    color: white; /* Warna teks tombol */
     /* border: none; Menghilangkan border default */
     padding: 10px 20px;
     font-size: 16px;
@@ -83,8 +84,8 @@ body{
 }
 
 .modal button:hover {
-    background-color: #aaaaaa86; /* Warna latar belakang saat hover */
-    color: black; /* Warna teks saat hover */
+    background-color: #3a3a3a; /* Warna latar belakang saat hover */
+    
 }
 .cek {
     
