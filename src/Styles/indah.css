@@ -99,7 +99,7 @@ body{
     flex-direction: column; /* Elemen diatur secara vertikal */
     align-items: center; /* Pusatkan elemen secara horizontal */
     justify-content: center; /* Pusatkan elemen secara vertikal */
-    background-color: rgba(141, 141, 141, 0.96); /* Warna putih transparan */
+    background-color: rgba(0, 0, 0, 0.671); /* Warna putih transparan */
     border-start-start-radius: 4rem;
     border-start-end-radius: 1rem;
     border-end-end-radius: 3rem;

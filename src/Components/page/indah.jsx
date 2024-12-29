@@ -1,44 +1,83 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import audio from "./audio/indahbg.mp3";
 import image1 from "./images/indah2.jpg";
 import image2 from "./images/indah.jpg";
 import image3 from "./images/indah1.jpg";
 import video1 from "./images/Farewell2.mp4";
-
 import "../../Styles/indah.css";
 
 const Indah = () => {
-    const audioRef = useRef(null);
     const [showModal, setShowModal] = useState(true);
-    const [showCek, setShowCek] = useState(false); // State untuk kontrol visibilitas cek
-    const [currentIndex, setCurrentIndex] = useState(0); // State untuk kontrol gambar carousel
+    const [showCek, setShowCek] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [timeElapsed, setTimeElapsed] = useState({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+    });
 
     const images = [image1, image2, image3];
 
     const handleStartAudio = () => {
-        const audioElement = audioRef.current;
+        const audioElement = document.getElementById("audio");
         if (audioElement) {
             audioElement.volume = 0.5;
             audioElement.play();
         }
         setShowModal(false);
-        setShowCek(true); // Tampilkan elemen dengan class "cek"
+        setShowCek(true);
     };
 
-    // Fungsi untuk mengubah gambar setiap 9 detik
+    // Logika penghitungan waktu yang sudah berlalu
+    useEffect(() => {
+        const calculateTimeElapsed = () => {
+            const targetDate = new Date(2024, 11, 13); // Tanggal 13 Desember 2024
+            const currentDate = new Date(); // Tanggal saat ini
+
+            const difference = currentDate - targetDate; // Selisih waktu dalam milidetik
+
+            if (difference < 0) {
+                setTimeElapsed({
+                    days: 0,
+                    hours: 0,
+                    minutes: 0,
+                    seconds: 0
+                });
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24)); // Menghitung hari
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); // Menghitung jam
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)); // Menghitung menit
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000); // Menghitung detik
+
+            setTimeElapsed({
+                days,
+                hours,
+                minutes,
+                seconds
+            });
+        };
+
+        const interval = setInterval(calculateTimeElapsed, 1000); // Update setiap detik
+
+        return () => clearInterval(interval); // Bersihkan interval saat komponen di-unmount
+    }, []);
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // Ganti gambar setiap 9 detik
-        return () => clearInterval(interval);
+        }, 5000); // Ganti gambar setiap 5 detik
+        return () => clearInterval(interval); // Bersihkan interval
     }, [images.length]);
 
     return (
         <div className="Background-imgs page-chalkduster">
             <video autoPlay muted loop id="bg-video">
-                <source src={video1} type="video/mp4"></source>
+                <source src={video1} type="video/mp4" />
             </video>
-            <audio ref={audioRef} src={audio} loop />
+            <audio id="audio" src={audio} loop />
             {showModal && (
                 <div className="modal">
                     <p>ready?</p>
@@ -56,21 +95,51 @@ const Indah = () => {
                         style={{ width: "100%" }}
                     />
                 </div>
-                
+
                 <div className="pesan">
+                    {/* Menampilkan waktu yang telah berlalu */}
+                    <h4 id="elapsed-time">
+                        {timeElapsed.days} Days, {timeElapsed.hours} Hour, {timeElapsed.minutes} Minute, {timeElapsed.seconds} Seconds, since.....
+                    </h4>
                     <h1>13/12/24</h1>
                     <p>
-                        It’s hard to put into words how much your presence has meant to me. You've been a source of light, laughter, and comfort, making even the ordinary moments extraordinary. I don’t know how I feel about you or how to describe it—I mean seriously, I don’t even know what place you hold in my life or what you truly mean to me, but thank you for coming into my life when I needed it most. This year was the saddest for me, and you came out of nowhere and brought joy back into my LIFE.....
+                        It’s hard to put into words how much your presence has
+                        meant to me. You've been a source of light, laughter,
+                        and comfort, making even the ordinary moments
+                        extraordinary. I don’t know how I feel about you or how
+                        to describe it—I mean seriously, I don’t even know what
+                        place you hold in my life or what you truly mean to me,
+                        but thank you for coming into my life when I needed it
+                        most. This year was the saddest for me, and you came
+                        out of nowhere and brought joy back into my LIFE.....
                     </p>
                     <p>
-                    <br></br>As our paths diverge, I want you to know how much I value every memory we've created together. Of course, this farewell is bittersweet, but I’ll put you in my core memory, forever cherishing the moments we shared. I really miss what we had—the moments, the laughter, and you.
+                        <br></br>As our paths diverge, I want you to know how
+                        much I value every memory we've created together. Of
+                        course, this farewell is bittersweet, but I’ll put you
+                        in my core memory, forever cherishing the moments we
+                        shared. I really miss what we had—the moments, the
+                        laughter, and you.
                     </p>
                     <p>
-                    <br></br>I know this might sound like I’m overreacting, but I’m being honest with you. Wherever life takes you, I hope it’s filled with endless joy, success, and love, because you truly deserve nothing less. Though we may be apart, I’ll always hold a special place for you in my heart. Farewell for now, and may our paths cross again someday, if god allow us...☺️
+                        <br></br>I know this might sound like I’m overreacting,
+                        but I’m being honest with you. Wherever life takes you,
+                        I hope it’s filled with endless joy, success, and love,
+                        because you truly deserve nothing less. Though we may
+                        be apart, I’ll always hold a special place for you in
+                        my heart. Farewell for now, and may our paths cross
+                        again someday, if god allow us...☺️
                     </p>
+                    <br />
+                    <hr />
+                    <br />
+                    <p>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
                     <p>
-                    <br></br>*The content of this could change over time, until I get used to it like usual, but your memory is eternal in here.
+                        <br></br>*The content of this could change over time,
+                        until I get used to it like usual, but your memory is
+                        eternal in here.
                     </p>
+                    
                 </div>
             </div>
         </div>
