@@ -103,10 +103,11 @@ const Indah = () => {
                         {timeElapsed.days} Days, {timeElapsed.hours} Hour, {timeElapsed.minutes} Minute, {timeElapsed.seconds} Seconds, since.....
                     </h4>
                     <h1>13/12/24</h1>
+                    <br />
                     <p>
                         Dear {namenya},
                         <br />
-                        It’s hard to put into words how much your presence has
+                        &emsp; It’s hard to put into words how much your presence has
                         meant to me. You've been a source of light, laughter,
                         and comfort, making even the ordinary moments
                         extraordinary. I don’t know how I feel about you or how
@@ -117,7 +118,7 @@ const Indah = () => {
                         out of nowhere and brought joy back into my LIFE.....
                     </p>
                     <p>
-                        <br></br>As our paths diverge, I want you to know how
+                        <br></br>&emsp;As our paths diverge, I want you to know how
                         much I value every memory we've created together. Of
                         course, this farewell is bittersweet, but I’ll put you
                         in my core memory, forever cherishing the moments we
@@ -125,7 +126,7 @@ const Indah = () => {
                         laughter, and you.
                     </p>
                     <p>
-                        <br></br>I know this might sound like I’m overreacting,
+                        <br></br>&emsp;I know this might sound like I’m overreacting,
                         but I’m being honest with you. Wherever life takes you,
                         I hope it’s filled with endless joy, success, and love,
                         because you truly deserve nothing less. Though we may
@@ -136,8 +137,15 @@ const Indah = () => {
                     <br />
                     <hr />
                     <br />
-                    <p>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
-                    <p>
+                        <div className="diary">
+                            <h2>Diary</h2>
+                            <p>I don’t know what to write, but if I feel like it and suddenly think of you, I’ll just write this.</p>
+                        </div>
+                    <br />
+                    <p><h6>30/12/24</h6>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
+                    <br />
+                    <hr />
+                    <p className="note">
                         <br></br>*The content of this could change over time,
                         until I get used to it like usual, but your memory is
                         eternal in here.

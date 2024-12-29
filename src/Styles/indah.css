@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Chalkduster';
     src: url('../Components/font/Chalkduster.ttf') format('truetype'); /* Ganti dengan path ke file font */
-    font-weight: normal;
+    font-weight: thin;
     font-style: normal;
 }
 body{
@@ -138,6 +138,22 @@ body{
 .cek.show {
     opacity: 1;
     transform: translateY(0); /* Kembali ke posisi semula */
+}
+.diary{
+    text-align: center;
+    gap: 10px;
+}
+.diary h2{
+    font-family: chalkduster;
+}
+.diary p{
+    font-family: poppins;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+.note{
+    color: rgb(203, 190, 167);
 }
 
 @media screen and (max-width: 1500px) {
