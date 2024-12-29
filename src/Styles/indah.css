@@ -134,7 +134,11 @@ body{
 .pesan p{
     /* margin: 30px; */
 }
-
+.pesan p em{
+    font-family: robotto;
+    font-style: italic;
+    font-size: 20px;
+}
 .cek.show {
     opacity: 1;
     transform: translateY(0); /* Kembali ke posisi semula */
@@ -167,6 +171,11 @@ body{
         word-wrap: break-word;
         hyphens: auto;
     }
+    .pesan p em{
+        font-family: robotto;
+        font-style: italic;
+        font-size: 15px;
+    }
     .cek{
         padding: 10px;
     }
@@ -192,7 +201,7 @@ body{
     }
     .diary p{
         font-family: poppins;
-        font-size: 10px;
+        font-size: 8px;
         text-align: center;
         padding-top: 10px;
     }

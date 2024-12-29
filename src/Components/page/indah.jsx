@@ -134,6 +134,9 @@ const Indah = () => {
                         my heart. Farewell for now, and may our paths cross
                         again someday, if god allow us...☺️
                     </p>
+                    <p>
+                        <br />&emsp;Ohh yaa, i found some good quotes&ensp;<em> “we didn’t finish the year together, but ever moments with you was worth it"</em>
+                    </p>
                     <br />
                     <hr />
                     <br />
