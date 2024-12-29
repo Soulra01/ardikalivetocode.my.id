@@ -7,6 +7,7 @@ import video1 from "./images/Farewell2.mp4";
 import "../../Styles/indah.css";
 
 const Indah = () => {
+
     const [showModal, setShowModal] = useState(true);
     const [showCek, setShowCek] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,7 +17,7 @@ const Indah = () => {
         minutes: 0,
         seconds: 0
     });
-
+    const namenya = "Kunti Bogel";
     const images = [image1, image2, image3];
 
     const handleStartAudio = () => {
@@ -103,6 +104,8 @@ const Indah = () => {
                     </h4>
                     <h1>13/12/24</h1>
                     <p>
+                        Dear {namenya},
+                        <br />
                         It’s hard to put into words how much your presence has
                         meant to me. You've been a source of light, laughter,
                         and comfort, making even the ordinary moments
