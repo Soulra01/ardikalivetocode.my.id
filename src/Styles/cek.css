@@ -1,5 +1,12 @@
-.spotify-track img{
-    width: 350px;
-    height: 350px;
-
+.comments{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.comments textarea{
+    width: 90%;
+    height: 100px;
+    margin-bottom: 10px;
 }
