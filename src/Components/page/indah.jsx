@@ -69,7 +69,7 @@ const Indah = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // Ganti gambar setiap 5 detik
+        }, 10000); // Ganti gambar setiap 5 detik
         return () => clearInterval(interval); // Bersihkan interval
     }, [images.length]);
 
