@@ -144,8 +144,8 @@ const Indah = () => {
                             <h2>Diary</h2>
                             <p>I don’t know what to write, but if I feel like it and suddenly think or miss of you, I’ll just write this.</p>
                         </div>
-                    <br />
-                    <p><h6>30/12/24</h6>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
+                    <br /><p><h6>30/12/24</h6>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
+                    <br /><p><h6>01/01/25</h6>Happy New Year. Banyak banget yang mau gw ceritain akhir2 ini, pengen sih ketemu buat ngobrol-ngobrol kaya kemarin, cuman waktunya kayanya ga pas mulu dehh wkwkwk</p>
                     <br />
                     <hr />
                     <p className="note">
