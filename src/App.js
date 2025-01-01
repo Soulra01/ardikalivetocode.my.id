@@ -17,7 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/portofolio' element={<Portofolio />} />
-        <Route path='/cek' element={<Cek />} />
+        <Route path='/GwKangen' element={<Cek />} />
         <Route path='/farewell' element={<Farewell />} />
         <Route path='/farewell/indah' element={<PageTransition><Indah /></PageTransition>} />
       </Routes>
