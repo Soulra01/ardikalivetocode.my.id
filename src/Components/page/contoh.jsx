@@ -4,10 +4,10 @@ import image1 from "./images/indah2.jpg";
 import image2 from "./images/indah.jpg";
 import image3 from "./images/indah1.jpg";
 import video1 from "./images/Farewell2.mp4";
+import axios from "axios";
 import "../../Styles/indah.css";
 
 const Indah = () => {
-
     const [showModal, setShowModal] = useState(true);
     const [showCek, setShowCek] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,6 +17,7 @@ const Indah = () => {
         minutes: 0,
         seconds: 0
     });
+    const [comments, setComments] = useState([]);
     const namenya = "Kunti Bogel";
     const images = [image1, image2, image3];
 
@@ -73,6 +74,33 @@ const Indah = () => {
         return () => clearInterval(interval); // Bersihkan interval
     }, [images.length]);
 
+    // Fetch comments from API
+    useEffect(() => {
+        const fetchComments = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/comments");
+                const sortedComments = response.data.sort((a, b) => {
+                    const dateA = new Date(a.created_at);
+                    const dateB = new Date(b.created_at);
+                    return dateA - dateB; // Urutkan dari terbaru ke terlama
+                });
+                setComments(sortedComments);
+            } catch (error) {
+                // console.error('Error fetching comments', error);
+            }
+        };
+        fetchComments();
+    }, []);
+
+    // Fungsi untuk format tanggal menjadi dd/mm/yy
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0"); // Bulan dimulai dari 0
+        const year = String(date.getFullYear()).slice(2); // Mengambil dua digit terakhir tahun
+        return `${day}/${month}/${year}`;
+    };
+
     return (
         <div className="Background-imgs page-chalkduster">
             <video autoPlay muted loop id="bg-video">
@@ -100,16 +128,18 @@ const Indah = () => {
                 <div className="pesan">
                     {/* Menampilkan waktu yang telah berlalu */}
                     <h4 id="elapsed-time">
-                        {timeElapsed.days} Days, {timeElapsed.hours} Hour, {timeElapsed.minutes} Minute, {timeElapsed.seconds} Seconds, since.....
+                        {timeElapsed.days} Days, {timeElapsed.hours} Hour,{" "}
+                        {timeElapsed.minutes} Minute, {timeElapsed.seconds}{" "}
+                        Seconds, since.....
                     </h4>
                     <h1>13/12/24</h1>
                     <br />
                     <p>
                         Dear {namenya},
                         <br />
-                        &emsp; It’s hard to put into words how much your presence has
-                        meant to me. You've been a source of light, laughter,
-                        and comfort, making even the ordinary moments
+                        &emsp; It’s hard to put into words how much your
+                        presence has meant to me. You've been a source of light,
+                        laughter, and comfort, making even the ordinary moments
                         extraordinary. I don’t know how I feel about you or how
                         to describe it—I mean seriously, I don’t even know what
                         place you hold in my life or what you truly mean to me,
@@ -118,42 +148,63 @@ const Indah = () => {
                         out of nowhere and brought joy back into my LIFE.....
                     </p>
                     <p>
-                        <br></br>&emsp;As our paths diverge, I want you to know how
-                        much I value every memory we've created together. Of
-                        course, this farewell is bittersweet, but I’ll put you
-                        in my core memory, forever cherishing the moments we
-                        shared. I really miss what we had—the moments, the
-                        laughter, and you.
+                        <br />
+                        &emsp;As our paths diverge, I want you to know how much
+                        I value every memory we've created together. Of course,
+                        this farewell is bittersweet, but I’ll put you in my core
+                        memory, forever cherishing the moments we shared. I
+                        really miss what we had—the moments, the laughter, and
+                        you.
                     </p>
                     <p>
-                        <br></br>&emsp;I know this might sound like I’m overreacting,
-                        but I’m being honest with you. Wherever life takes you,
-                        I hope it’s filled with endless joy, success, and love,
-                        because you truly deserve nothing less. Though we may
-                        be apart, I’ll always hold a special place for you in
-                        my heart. Farewell for now, and may our paths cross
-                        again someday, if god allow us...☺️
+                        <br />
+                        &emsp;I know this might sound like I’m overreacting, but
+                        I’m being honest with you. Wherever life takes you, I
+                        hope it’s filled with endless joy, success, and love,
+                        because you truly deserve nothing less. Though we may be
+                        apart, I’ll always hold a special place for you in my
+                        heart. Farewell for now, and may our paths cross again
+                        someday, if god allow us...☺️
                     </p>
                     <p>
-                        <br />&emsp;Ohh yaa, i found some good quotes&ensp;<em> “we didn’t finish the year together, but ever moments with you was worth it"</em>
+                        <br />
+                        &emsp;Ohh yaa, i found some good quotes&ensp;
+                        <em>
+                            “we didn’t finish the year together, but every moment
+                            with you was worth it"
+                        </em>
                     </p>
                     <br />
                     <hr />
                     <br />
-                        <div className="diary">
-                            <h2>Diary</h2>
-                            <p>I don’t know what to write, but if I feel like it and suddenly think or miss of you, I’ll just write this.</p>
-                        </div>
-                    <br /><p><h6>30/12/24</h6>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
-                    <br /><p><h6>01/01/25</h6>Happy New Year. Banyak banget yang mau gw ceritain akhir2 ini, pengen sih ketemu buat ngobrol-ngobrol kaya kemarin, cuman waktunya kayanya ga pas mulu dehh wkwkwk</p>
+                    <div className="diary">
+                        <h2>Diary</h2>
+                        <p>
+                            I don’t know what to write, but if I feel like it and
+                            suddenly think or miss you, I’ll just write this.
+                        </p>
+                    </div>
                     <br />
-                    <hr />
-                    <p className="note">
-                        <br></br>*The content of this could change over time,
-                        until I get used to it like usual, but your memory is
-                        eternal in here.
-                    </p>
                     
+                    {/* <ul>
+                        {comments.map((comment) => (
+                            <p key={comment.id}>
+                                <h6>{formatDate(comment.created_at)}</h6>
+                                {comment.comment}
+                                <br />
+                                <br />
+                            </p>
+                            
+                        ))}
+                    </ul> */}
+                    <br />
+                    <hr />    
+                    <p className="note">
+                        <br />
+                        *The content of this could change over time, until I get
+                        used to it like usual, but your memory is eternal in
+                        here.
+                    </p>
                 </div>
             </div>
         </div>
