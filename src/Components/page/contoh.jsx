@@ -183,21 +183,21 @@ const Indah = () => {
                             I don’t know what to write, but if I feel like it and
                             suddenly think or miss you, I’ll just write this.
                         </p>
+                        <br />
+                        <div className="diary-container">
+                        <ul>
+                            {comments.map((comment) => (
+                                <p key={comment.id}>
+                                    <h6>{formatDate(comment.created_at)}</h6>
+                                    {comment.comment}
+                                    <br />
+                                    <br />
+                                </p>
+                                
+                            ))}
+                        </ul>
+                        </div>
                     </div>
-                    <br />
-                    
-                    {/* <ul>
-                        {comments.map((comment) => (
-                            <p key={comment.id}>
-                                <h6>{formatDate(comment.created_at)}</h6>
-                                {comment.comment}
-                                <br />
-                                <br />
-                            </p>
-                            
-                        ))}
-                    </ul> */}
-                    <br />
                     <hr />    
                     <p className="note">
                         <br />

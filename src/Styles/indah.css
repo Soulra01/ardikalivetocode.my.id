@@ -160,6 +160,7 @@ body{
     justify-content: left;  /* Mengubah justify-content menjadi kiri */
     width: 100%;
     gap: 10px;
+    font-size: 15px;
 }
 .diary-container ul p h6{
     font-family: poppins;
@@ -216,7 +217,13 @@ body{
         text-align: center;
         padding-top: 10px;
     }
-    .diary-container p{
+    .diary-container ul p{
+        font-size: 12px;
+    }
+    .diary-container ul p h6{
+        font-family: poppins;
+        font-style: italic;
         font-size: 15px;
+        margin:0;
     }
 }
