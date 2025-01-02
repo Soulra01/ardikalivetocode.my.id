@@ -8,6 +8,7 @@ body{
     scroll-behavior: smooth; /* Memungkinkan scroll yang halus */
     overflow-y: auto; /* Memastikan scrollbar vertikal muncul jika konten melampaui tinggi viewport */
     overflow-x: hidden; /* Menyembunyikan scrollbar horizontal jika tidak diperlukan */
+    font-family: poppins;
 }
 /* Terapkan font Chalkduster hanya pada halaman tertentu */
 .page-chalkduster {
@@ -131,9 +132,7 @@ body{
     font-size: 30px;
     text-align: justify;
 }
-.pesan p{
-    /* margin: 30px; */
-}
+
 .pesan p em{
     font-family: robotto;
     font-style: italic;
@@ -155,6 +154,18 @@ body{
     font-size: 20px;
     text-align: center;
     padding-top: 10px;
+}
+.diary-container ul p{
+    text-align: left;  /* Mengubah text-align menjadi kiri */
+    justify-content: left;  /* Mengubah justify-content menjadi kiri */
+    width: 100%;
+    gap: 10px;
+}
+.diary-container ul p h6{
+    font-family: poppins;
+    font-style: italic;
+    font-size: 20px;
+    margin:0;
 }
 .note{
     color: rgb(203, 190, 167);
@@ -200,9 +211,12 @@ body{
         text-align: justify;
     }
     .diary p{
-        font-family: poppins;
+        /* font-family: poppins; */
         font-size: 8px;
         text-align: center;
         padding-top: 10px;
+    }
+    .diary-container p{
+        font-size: 15px;
     }
 }
