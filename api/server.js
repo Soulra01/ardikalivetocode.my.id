@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { addComment, getComments } = require('./src/Controllers/commentsController');
+const { addComment, getComments } = require('../src/Controllers/commentsController');
 
 const app = express();
 app.use(cors());
@@ -11,7 +11,7 @@ app.post('/comments', addComment);
 app.get('/comments', getComments);
 
 // Sync database
-const sequelize = require('./src/Components/databases/db');
+const sequelize = require('../src/Components/databases/db');
 sequelize.sync().then(() => {
 //   console.log('Database connected and synced');
 }).catch((err) => {
