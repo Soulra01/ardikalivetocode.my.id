@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { addComment, getComments } = require('../commentsController');
-const sequelize = require('../databases/database');
+const { addComment, getComments } = require('../src/Controllers/commentsController');
 
 const app = express();
 app.use(cors());
@@ -12,13 +11,13 @@ app.post('/comments', addComment);
 app.get('/comments', getComments);
 
 // Sync database
+const sequelize = require('../src/Components/databases/db');
 sequelize.sync().then(() => {
-  //   console.log('Database connected and synced');
+//   console.log('Database connected and synced');
 }).catch((err) => {
-  //   console.error('Failed to sync database:', err);
+//   console.error('Failed to sync database:', err);
 });
 
-// Convert Express app to serverless function
-module.exports = (req, res) => {
-  app(req, res);
-};
+app.listen(5000, () => {
+  console.log('Server running on port 5000');
+});
