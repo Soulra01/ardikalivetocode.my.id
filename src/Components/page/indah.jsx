@@ -147,6 +147,8 @@ const Indah = () => {
                     <br /><p><h6>30/12/24</h6>How's your day? Though, honestly, it should be fine, right? Hahaha...</p>
                     <br /><p><h6>01/01/25</h6>Happy New Year. Banyak banget yang mau gw ceritain akhir2 ini, pengen sih ketemu buat ngobrol-ngobrol kaya kemarin, cuman waktunya kayanya ga pas mulu dehh wkwkwk</p>
                     <br /><p><h6>02/01/25</h6>Hello, i dont hows ur day, maybe kinda busy and u miss someone, may allah give her a better place 🙏</p>
+                    <br /><p><h6>03/01/25</h6>So today, I promise that if you read 5 books, I’ll give you a book, right? Okay then, let’s do it!🥱</p>
+                    <br /><p><h6>04/01/25</h6>If I’m correct, I’ve read a book and remember this quote: &ensp;<em>"I hope my prayers can hug you when my arms can’t."</em> &ensp; but I forgot which book it was. I’ll look for it later, hehe. The meaning is that even when you’re feeling down and sad, there’s still someone praying for you. And I’ll be one of them for your good. Ganbatte! 🙈</p>
                     <br />
                     <hr />
                     <p className="note">

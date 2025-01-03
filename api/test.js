@@ -4,11 +4,11 @@ const { addComment, getComments } = require('../src/Controllers/commentsControll
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // Untuk parsing request body
+app.use(express.json()); // Parse JSON request body
 
 // Routes
-app.post('/comments', addComment);
-app.get('/comments', getComments);
+app.post('/api/comments', addComment);
+app.get('/api/comments', getComments);
 
 // Sync database
 const sequelize = require('../src/Components/databases/db');
