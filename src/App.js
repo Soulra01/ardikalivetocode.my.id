@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './Components/navbar';
 import Home from './Components/page/home';
@@ -10,9 +10,33 @@ import PageTransition from './Components/page/PageTransition';
 import './Styles/App.css';
 
 function App() {
+  const [message] = useState("");
+
+  useEffect(() => {
+    fetch('/api/comments', {
+      method: 'GET',
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error!!!!! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => console.log(data))
+      .catch((error) => console.error("Error fetching API:", error));
+    
+  }, []);
+
+  console.log(message);
+
   return (
     <BrowserRouter>
       <ConditionalNavbar />
+      {/* <div> className="App">
+        <header className="App-header">
+          <h1>My Portfolio</h1>
+        </header>
+      </div> */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />

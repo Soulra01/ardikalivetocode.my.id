@@ -7,7 +7,7 @@ const CommentList = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/comments');
+        const response = await axios.get('/api/comments');
         const sortedComments = response.data.sort((a, b) => {
           const dateA = new Date(a.created_at);
           const dateB = new Date(b.created_at);
