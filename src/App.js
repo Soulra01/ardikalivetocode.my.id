@@ -6,6 +6,7 @@ import Portofolio from './Components/page/portofolio';
 import Farewell from './Components/page/farewell';
 import Cek from './Components/page/cek';
 import Indah from './Components/page/indah';
+import Yaldi from './Components/page/yaldi';
 import PageTransition from './Components/page/PageTransition';
 import './Styles/App.css';
 
@@ -44,6 +45,7 @@ function App() {
         <Route path='/GwKangen' element={<Cek />} />
         <Route path='/farewell' element={<Farewell />} />
         <Route path='/farewell/indah' element={<PageTransition><Indah /></PageTransition>} />
+        <Route path='/farewell/Pak_RT' element={<PageTransition><Yaldi /></PageTransition>} />
       </Routes>
     </BrowserRouter>
   );
@@ -51,7 +53,7 @@ function App() {
 
 const ConditionalNavbar = () => {
   const location = useLocation();
-  const hideNavbarRoutes = ['/farewell','/farewell/indah']; // Daftar rute yang tidak menampilkan Navbar
+  const hideNavbarRoutes = ['/farewell','/farewell/indah','/farewell/Pak_RT']; // Daftar rute yang tidak menampilkan Navbar
   const shouldShowNavbar = !hideNavbarRoutes.includes(location.pathname);
 
   return shouldShowNavbar ? <Navbar /> : null;

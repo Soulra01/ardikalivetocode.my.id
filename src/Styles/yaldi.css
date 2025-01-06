@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Chalkduster';
+    src: url('../Components/font/Chalkduster.ttf') format('truetype'); /* Ganti dengan path ke file font */
+    font-weight: thin;
+    font-style: normal;
+}
+body{
+    scroll-behavior: smooth; /* Memungkinkan scroll yang halus */
+    overflow-y: auto; /* Memastikan scrollbar vertikal muncul jika konten melampaui tinggi viewport */
+    overflow-x: hidden; /* Menyembunyikan scrollbar horizontal jika tidak diperlukan */
+    font-family: poppins;
+}
+/* Terapkan font Chalkduster hanya pada halaman tertentu */
+.page-chalkduster {
+    font-family: 'Chalkduster', sans-serif !important;
+}
+
+.basenya{
+    width: 100%; /* Lebar penuh */
+    min-height: 100vh; /* Tinggi minimum adalah 100% viewport */
+    display: flex; /* Jika ada konten, tambahkan fleksibilitas */
+    align-items: center; /* Konten vertikal berada di tengah */
+    justify-content: center; /* Konten horizontal berada di tengah */
+}
+
+#bg-video {
+    position: fixed; /* Menggunakan fixed agar video tetap di latar belakang meskipun halaman di-scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    object-fit: cover; /* Memastikan video mengisi seluruh layar */
+    z-index: -1; /* Menempatkan video di belakang konten */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Konten di atas video */
+    color: white; /* Warna teks agar terlihat jelas di atas video */
+    padding: 20px;
+    /* Anda bisa menambahkan padding, margin, atau gaya lainnya untuk konten Anda */
+}
+
+.Background-imgs-yaldi {
+    background-image: url('../Components/page/images/yaldibg.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* Lebar penuh */
+    min-height: 100vh; /* Tinggi minimum adalah 100% viewport */
+    display: flex; /* Jika ada konten, tambahkan fleksibilitas */
+    align-items: center; /* Konten vertikal berada di tengah */
+    justify-content: center; /* Konten horizontal berada di tengah */
+}
+
+.modal {
+    font-weight: 100;
+    font-size: 20px;
+    width: 500px;
+    position: fixed; /* Membuat modal selalu ada di posisi yang sama saat scroll */
+    top: 50%; /* Letakkan di tengah secara vertikal */
+    left: 50%; /* Letakkan di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Koreksi untuk memusatkan elemen */
+    display: flex; /* Aktifkan flexbox */
+    flex-direction: column; /* Tampilkan elemen secara vertikal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    align-items: center; /* Pusatkan secara horizontal */
+    gap: 20px; /* Jarak antar elemen */
+    color: white; /* Warna teks */
+    background-color: rgba(0, 0, 0, 0.9); /* Tambahkan warna latar belakang */
+    padding: 20px; /* Ruang di dalam modal */
+    border-radius: 10px; /* Opsional: membuat sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk tampilan lebih baik */
+    z-index: 1000; /* Pastikan modal di atas elemen lain */
+}
+.modal button {
+    background-color: #000000; /* Warna latar belakang default tombol */
+    color: white; /* Warna teks tombol */
+    /* border: none; Menghilangkan border default */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Menambahkan transisi halus untuk hover */
+}
+
+.modal button:hover {
+    background-color: #3a3a3a; /* Warna latar belakang saat hover */
+    
+}
+.cek {
+    
+    color: white;
+    opacity: 0;
+    width: 90%;
+    /* height: 100%; */
+    min-height: 10vh;
+    padding: 40px;
+    margin: 20px;
+    display: flex; /* Aktifkan Flexbox */
+    flex-direction: column; /* Elemen diatur secara vertikal */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    justify-content: center; /* Pusatkan elemen secara vertikal */
+    background-color: rgba(0, 0, 0, 0.671); /* Warna putih transparan */
+    border-start-start-radius: 4rem;
+    border-start-end-radius: 1rem;
+    border-end-end-radius: 3rem;
+    border-end-start-radius: 2rem;
+    transform: translateY(20px); /* Elemen mulai dengan posisi lebih rendah */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi smooth */
+}
+.cek img {
+    width: 350px;
+    height: 450px;
+    border-start-start-radius: 4rem;
+    border-start-end-radius: 1rem;
+    border-end-end-radius: 3rem;
+    border-end-start-radius: 2rem;
+    object-fit: cover;
+    /* margin-bottom: 10px; */
+    justify-content: center;
+    /* transform: scale(3); Skala gambar */
+
+}
+.image-continer{
+    margin: 20px
+}
+.pesan{
+    /* margin: 10px; */
+    font-family: poppins;
+    /* margin: 10px; */
+    font-size: 30px;
+    text-align: justify;
+}
+
+.pesan p em{
+    font-family: robotto;
+    font-style: italic;
+    font-size: 20px;
+}
+.cek.show {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi semula */
+}
+.diary{
+    text-align: center;
+    gap: 10px;
+}
+.diary h2{
+    font-family: chalkduster;
+}
+.diary p{
+    font-family: poppins;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/*.diary-container ul p{
+    text-align: left;  
+    justify-content: left; 
+    width: 100%;
+    gap: 10px;
+    font-size: 15px;
+} */
+/* .diary-container ul p h6{
+    font-family: poppins;
+    font-style: italic;
+    font-size: 20px;
+    margin:0;
+} */
+.note{
+    color: rgb(203, 190, 167);
+}
+
+@media screen and (max-width: 1500px) {
+    .Background-imgs{
+        background-image: none;
+    }
+    .bgfoto {
+        display: block;
+    }
+    .pesan p{
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    .pesan p em{
+        font-family: robotto;
+        font-style: italic;
+        font-size: 15px;
+    }
+    .cek{
+        padding: 10px;
+    }
+    .cek img {
+        /* width: 135px;
+        height: 135px; */
+        /* border-radius: 50%; */
+        object-fit: cover;
+        /* margin-bottom: 10px; */
+        justify-content: center;
+    
+    }
+    .modal{
+        width: 90%;
+        font-size: 17px;
+    }
+    .pesan {
+        margin: 20px;
+        font-family: poppins;
+        margin: 30px 30px;
+        font-size: 15px;
+        text-align: justify;
+    }
+    .diary p{
+        /* font-family: poppins; */
+        font-size: 8px;
+        text-align: center;
+        padding-top: 10px;
+    }
+    /* .diary-container ul p{
+        font-size: 12px;
+    }
+    .diary-container ul p h6{
+        font-family: poppins;
+        font-style: italic;
+        font-size: 15px;
+        margin:0;
+    } */
+}
