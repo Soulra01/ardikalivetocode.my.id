@@ -125,6 +125,15 @@ body{
 .image-continer{
     margin: 20px
 }
+.mySlides {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transisi opacity 1 detik */
+}
+
+.mySlides.show {
+    opacity: 1;
+}
 .pesan{
     /* margin: 10px; */
     font-family: poppins;

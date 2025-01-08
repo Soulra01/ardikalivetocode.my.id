@@ -66,11 +66,19 @@ const Indah = () => {
         return () => clearInterval(interval); // Bersihkan interval saat komponen di-unmount
     }, []);
 
+    const [fade, setFade] = useState(false);
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 10000); // Ganti gambar setiap 5 detik
-        return () => clearInterval(interval); // Bersihkan interval
+            setFade(false); // Mulai efek fade-out
+
+            // Setelah efek fade-out selesai (1 detik), ganti gambar
+            setTimeout(() => {
+                setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+                setFade(true); // Mulai efek fade-in
+            }, 1000); // Tunggu 1 detik untuk fade-out selesai
+        }, 4000); // Ganti gambar setiap 3 detik
+
+        return () => clearInterval(interval); // Bersihkan interval saat komponen dibersihkan
     }, [images.length]);
 
     return (
@@ -88,11 +96,11 @@ const Indah = () => {
             )}
             <div className={`cek ${showCek ? "show" : ""}`}>
                 {/* Carousel gambar */}
-                <div className="image-continer">
+                <div className="image-container">
                     <img
                         src={images[currentIndex]}
                         alt="Slide"
-                        className="mySlides w3-animate-fading"
+                        className={`mySlides ${fade ? "show" : ""}`}
                         style={{ width: "100%" }}
                     />
                 </div>
