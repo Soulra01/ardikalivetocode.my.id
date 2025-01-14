@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import audio from "./audio/indahbg.mp3";
+import audio from "./audio/bgindah2.mp3";
 import image1 from "./images/indah2.jpg";
 import image2 from "./images/indah.jpg";
 import image3 from "./images/indah1.jpg";
@@ -23,7 +23,7 @@ const Indah = () => {
     const handleStartAudio = () => {
         const audioElement = document.getElementById("audio");
         if (audioElement) {
-            audioElement.volume = 0.5;
+            audioElement.volume = 0.08;
             audioElement.play();
         }
         setShowModal(false);
