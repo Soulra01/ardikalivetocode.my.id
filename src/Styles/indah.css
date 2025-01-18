@@ -164,6 +164,13 @@ body{
     text-align: center;
     padding-top: 10px;
 }
+.diary-container{
+    text-decoration: line-through;
+    opacity: 50%;
+}
+.p-last p{
+    text-decoration: none;
+}
 
 /*.diary-container ul p{
     text-align: left;  
